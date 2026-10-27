@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studhub — Ilya Panko Portfolio</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var theme = null;
+        var lang = null;
+        try {
+          theme = localStorage.getItem("theme");
+          lang = localStorage.getItem("lang");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        root.dataset.theme = theme;
+        if (lang === "ru" || lang === "en") root.dataset.lang = lang;
+      })();
+    </script>
+    <meta name="description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta name="author" content="Ilya Panko" />
+    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://kotkenny.vercel.app/cases/studhub.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ilya Panko" />
+    <meta property="og:title" content="Studhub — Ilya Panko Portfolio" />
+    <meta property="og:description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta property="og:url" content="https://kotkenny.vercel.app/cases/studhub.html" />
+    <meta property="og:image" content="https://kotkenny.vercel.app/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ilya Panko — Senior Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Studhub — Ilya Panko Portfolio" />
+    <meta name="twitter:description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta name="twitter:image" content="https://kotkenny.vercel.app/assets/og.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../index.html">Ilya Panko</a>
+        <nav class="nav">
+          <button class="lang-toggle" data-lang-toggle type="button">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20" />
+            <path
+              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+            />
+          </svg>
+          <span data-lang-label>RU</span>
+        </button>
+          <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch color theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="case-header">
+      <div class="container">
+        <a class="back" href="../index.html#projects"><svg class="back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5" /><path d="m12 19-7-7 7-7" /></svg> <span class="i18n-en">Back to projects</span><span class="i18n-ru">Назад к проектам</span></a>
+        <h1>Studhub</h1>
+        <p class="sub">
+          <span class="i18n-en">
+            A full-stack microservices platform for university students — academic
+            schedule management, virtual economy, and a marketplace.
+          </span>
+          <span class="i18n-ru">
+            Full-stack микросервисная платформа для студентов — учебное
+            расписание, виртуальная экономика и маркетплейс.
+          </span>
+        </p>
+        <div class="case-meta">
+          <div class="meta-item">
+            <div class="label"><span class="i18n-en">Role</span><span class="i18n-ru">Роль</span></div>
+            <div class="value"><span class="i18n-en">Design &amp; Backend</span><span class="i18n-ru">Проектирование и Backend</span></div>
+          </div>
+          <div class="meta-item">
+            <div class="label"><span class="i18n-en">Type</span><span class="i18n-ru">Тип</span></div>
+            <div class="value"><span class="i18n-en">Personal project</span><span class="i18n-ru">Личный проект</span></div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Stack</div>
+            <div class="value">.NET 10 · RabbitMQ · Dapr · React</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container case-body">
+      <h2><span class="i18n-en">Overview</span><span class="i18n-ru">Обзор</span></h2>
+      <p class="i18n-en">
+        Studhub is a schedule platform for five Belarusian universities and the
+        product I designed and built to demonstrate a production-grade
+        microservices architecture end-to-end. It combines an academic schedule
+        system (with OCR-based parsing of timetable PDFs), a virtual economy with
+        escrow transactions, and a marketplace — used by 6 000+ people.
+      </p>
+      <p class="i18n-ru">
+        Studhub — платформа расписаний для пяти белорусских вузов, которую я
+        спроектировал и построил, чтобы показать production-grade
+        микросервисную архитектуру целиком. Она объединяет систему учебных
+        расписаний (с OCR-парсингом PDF-расписаний), виртуальную экономику с
+        escrow-транзакциями и маркетплейс — ей пользуются 6 000+ человек.
+      </p>
+
+      <h2><span class="i18n-en">Architecture</span><span class="i18n-ru">Архитектура</span></h2>
+      <p class="i18n-en">
+        Studhub is designed as a microservices platform: independently deployable
+        services with asynchronous event-driven communication, a single gateway
+        entry point, and background workers for long-running pipelines. Every
+        part is isolated, testable, and deployable on its own.
+      </p>
+      <p class="i18n-ru">
+        Studhub спроектирован как микросервисная платформа: независимо
+        деплоящиеся сервисы с асинхронным event-driven взаимодействием, единая
+        точка входа через gateway и фоновые воркеры для длительных пайплайнов.
+        Каждая часть изолирована, тестируема и деплоится отдельно.
+      </p>
+      <p class="i18n-en">
+        Beyond writing code, I solved real distributed-system problems — service
+        isolation, reliable async processing, and scalable data handling.
+      </p>
+      <p class="i18n-ru">
+        Помимо написания кода, я решал реальные проблемы распределённых систем —
+        изоляцию сервисов, надёжную асинхронную обработку и масштабируемую
+        работу с данными.
+      </p>
+
+      <h2><span class="i18n-en">Key features</span><span class="i18n-ru">Ключевые функции</span></h2>
+      <ul>
+        <li class="i18n-en">OCR pipeline (Tesseract) that turns timetable PDFs into structured schedule data.</li>
+        <li class="i18n-ru">OCR-пайплайн (Tesseract), превращающий PDF-расписания в структурированные данные.</li>
+        <li class="i18n-en">Virtual economy with escrow-protected transactions between students.</li>
+        <li class="i18n-ru">Виртуальная экономика с escrow-защищёнными транзакциями между студентами.</li>
+        <li class="i18n-en">Marketplace + store with event-driven order processing.</li>
+        <li class="i18n-ru">Маркетплейс и магазин с event-driven обработкой заказов.</li>
+        <li class="i18n-en">Push notifications and Telegram API integration.</li>
+        <li class="i18n-ru">Push-уведомления и интеграция с Telegram API.</li>
+        <li class="i18n-en">JWT-based auth and observability with Serilog.</li>
+        <li class="i18n-ru">Авторизация на JWT и наблюдаемость на Serilog.</li>
+      </ul>
+
+      <h2><span class="i18n-en">Results &amp; Impact</span><span class="i18n-ru">Результаты и влияние</span></h2>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-num">6K+</div>
+          <div class="metric-lbl"><span class="i18n-en">active users</span><span class="i18n-ru">активных пользователей</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">6</div>
+          <div class="metric-lbl"><span class="i18n-en">microservices</span><span class="i18n-ru">микросервисов</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">8+</div>
+          <div class="metric-lbl"><span class="i18n-en">event flows</span><span class="i18n-ru">event-потоков</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">180 → 95 ms</div>
+          <div class="metric-lbl"><span class="i18n-en">API latency (↓45%)</span><span class="i18n-ru">задержка API (↓45%)</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">85%</div>
+          <div class="metric-lbl"><span class="i18n-en">cache hit rate</span><span class="i18n-ru">cache hit rate</span></div>
+        </div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 250" role="img" aria-label="Optimization results chart">
+          <defs>
+            <linearGradient id="opt1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#6366f1" />
+              <stop offset="1" stop-color="#8b5cf6" />
+            </linearGradient>
+            <linearGradient id="opt2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#06b6d4" />
+              <stop offset="1" stop-color="#3b82f6" />
+            </linearGradient>
+            <linearGradient id="opt3" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ec4899" />
+              <stop offset="1" stop-color="#f43f5e" />
+            </linearGradient>
+          </defs>
+          <g font-family="Segoe UI, Arial, sans-serif">
+            <text x="24" y="36" font-size="14" fill="#475569" font-weight="600">API response time</text>
+            <text x="24" y="54" font-size="11" fill="#94a3b8">180ms → 95ms</text>
+            <rect x="280" y="28" width="180" height="26" rx="9" fill="url(#opt1)" />
+            <text x="472" y="47" font-size="15" font-weight="800" fill="#4338ca">↓45%</text>
+
+            <text x="24" y="122" font-size="14" fill="#475569" font-weight="600">DB query time</text>
+            <text x="24" y="140" font-size="11" fill="#94a3b8">120ms → 48ms</text>
+            <rect x="280" y="114" width="240" height="26" rx="9" fill="url(#opt2)" />
+            <text x="532" y="133" font-size="15" font-weight="800" fill="#0e7490">↓60%</text>
+
+            <text x="24" y="208" font-size="14" fill="#475569" font-weight="600">P95 event processing</text>
+            <text x="24" y="226" font-size="11" fill="#94a3b8">250ms → 150ms</text>
+            <rect x="280" y="200" width="160" height="26" rx="9" fill="url(#opt3)" />
+            <text x="452" y="219" font-size="15" font-weight="800" fill="#be185d">↓40%</text>
+          </g>
+        </svg>
+        <figcaption class="diagram-fig">
+          <span class="i18n-en">Optimization results — Redis caching and query tuning.</span>
+          <span class="i18n-ru">Результаты оптимизации — Redis caching и тюнинг запросов.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 250" role="img" aria-label="User growth chart">
+          <defs>
+            <linearGradient id="grow1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#6366f1" />
+              <stop offset="1" stop-color="#8b5cf6" />
+            </linearGradient>
+          </defs>
+          <g font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#94a3b8">
+            <line x1="70" y1="210" x2="720" y2="210" stroke="#e2e8f0" stroke-width="1" />
+            <line x1="70" y1="176" x2="720" y2="176" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4" />
+            <line x1="70" y1="142" x2="720" y2="142" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4" />
+            <line x1="70" y1="108" x2="720" y2="108" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4" />
+            <line x1="70" y1="74" x2="720" y2="74" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4" />
+            <line x1="70" y1="40" x2="720" y2="40" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4" />
+            <text x="56" y="214" text-anchor="end">0</text>
+            <text x="56" y="180" text-anchor="end">1k</text>
+            <text x="56" y="146" text-anchor="end">2k</text>
+            <text x="56" y="112" text-anchor="end">3k</text>
+            <text x="56" y="78" text-anchor="end">4k</text>
+            <text x="56" y="44" text-anchor="end">5k</text>
+            <text x="70" y="26" font-size="12" font-weight="700" fill="#64748b">Users</text>
+            <text x="395" y="246" text-anchor="middle" font-weight="600">Months</text>
+          </g>
+          <path d="M70 210 L162.8 208.3 L255.7 205.9 L348.6 199.8 L441.4 186.2 L534.3 159 L627.1 101.2 L720 40 L720 210 Z" fill="url(#grow1)" opacity="0.16" />
+          <path d="M70 210 L162.8 208.3 L255.7 205.9 L348.6 199.8 L441.4 186.2 L534.3 159 L627.1 101.2 L720 40" fill="none" stroke="url(#grow1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          <g font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">
+            <text x="70" y="230">M1</text>
+            <text x="162.8" y="230">M2</text>
+            <text x="255.7" y="230">M3</text>
+            <text x="348.6" y="230">M4</text>
+            <text x="441.4" y="230">M5</text>
+            <text x="534.3" y="230">M6</text>
+            <text x="627.1" y="230">M7</text>
+            <text x="720" y="230">M8</text>
+          </g>
+          <circle cx="70" cy="210" r="4" fill="#fff" stroke="#6366f1" stroke-width="2" />
+          <circle cx="255.7" cy="205.9" r="4" fill="#fff" stroke="#6366f1" stroke-width="2" />
+          <circle cx="534.3" cy="159" r="4" fill="#fff" stroke="#6366f1" stroke-width="2" />
+          <circle cx="720" cy="40" r="6" fill="#8b5cf6" stroke="#fff" stroke-width="2" />
+        </svg>
+        <figcaption class="diagram-fig">
+          <span class="i18n-en">Monthly user growth on the platform.</span>
+          <span class="i18n-ru">Рост пользователей платформы по месяцам.</span>
+        </figcaption>
+      </figure>
+
+      <h2><span class="i18n-en">Achievements</span><span class="i18n-ru">Ачивки</span></h2>
+      <ul class="achievements">
+        <li class="i18n-en">6 000+ active users across five universities.</li>
+        <li class="i18n-ru">6 000+ активных пользователей в пяти вузах.</li>
+        <li class="i18n-en">Six services with event-driven communication and a single gateway.</li>
+        <li class="i18n-ru">Шесть сервисов с event-driven взаимодействием и единым gateway.</li>
+        <li class="i18n-en">API latency reduced from 180 to 95 ms (−45%) after caching and query tuning.</li>
+        <li class="i18n-ru">Задержка API снижена с 180 до 95 мс (−45%) после кеширования и тюнинга запросов.</li>
+        <li class="i18n-en">Shipped to the App Store and Google Play with an Expo-based client.</li>
+        <li class="i18n-ru">Выпущено в App Store и Google Play на клиенте Expo.</li>
+      </ul>
+
+      <h2><span class="i18n-en">Links</span><span class="i18n-ru">Ссылки</span></h2>
+      <p>
+        <a href="https://studhub.by" target="_blank" rel="noreferrer">studhub.by</a> —
+        <span class="i18n-en">live platform</span><span class="i18n-ru">живая платформа</span>.
+      </p>
+      <p>
+        <a href="https://apps.apple.com/by/app/studhub-%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5/id6762131106" target="_blank" rel="noreferrer">App Store</a>
+        ·
+        <a href="https://play.google.com/store/apps/details?id=com.studhub" target="_blank" rel="noreferrer">Google Play</a>
+        —
+        <span class="i18n-en">mobile apps</span><span class="i18n-ru">мобильные приложения</span>.
+      </p>
+      <p>
+        <a href="https://github.com/KOTKenny">github.com/KOTKenny</a> — <span class="i18n-en">source is available on request</span><span class="i18n-ru">код доступен по запросу</span>.
+      </p>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© <span id="year"></span> Ilya Panko</span>
+        <a href="../index.html">
+          <span class="i18n-en">Back to main</span>
+          <span class="i18n-ru">На главную</span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

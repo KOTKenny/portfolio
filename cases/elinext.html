@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elinext — Ilya Panko Portfolio</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var theme = null;
+        var lang = null;
+        try {
+          theme = localStorage.getItem("theme");
+          lang = localStorage.getItem("lang");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        root.dataset.theme = theme;
+        if (lang === "ru" || lang === "en") root.dataset.lang = lang;
+      })();
+    </script>
+    <meta name="description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta name="author" content="Ilya Panko" />
+    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://kotkenny.vercel.app/cases/elinext.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ilya Panko" />
+    <meta property="og:title" content="Elinext — Ilya Panko Portfolio" />
+    <meta property="og:description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta property="og:url" content="https://kotkenny.vercel.app/cases/elinext.html" />
+    <meta property="og:image" content="https://kotkenny.vercel.app/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ilya Panko — Senior Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Elinext — Ilya Panko Portfolio" />
+    <meta name="twitter:description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta name="twitter:image" content="https://kotkenny.vercel.app/assets/og.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../index.html">Ilya Panko</a>
+        <nav class="nav">
+          <button class="lang-toggle" data-lang-toggle type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <span data-lang-label>RU</span>
+          </button>
+          <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch color theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="case-header">
+      <div class="container">
+        <a class="back" href="../index.html#projects"><svg class="back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5" /><path d="m12 19-7-7 7-7" /></svg> <span class="i18n-en">Back to projects</span><span class="i18n-ru">Назад к проектам</span></a>
+        <h1>Elinext</h1>
+        <p class="sub">
+          <span class="i18n-en">
+            Scalable backend services, REST APIs, and legacy modernization for
+            enterprise products.
+          </span>
+          <span class="i18n-ru">
+            Масштабируемые backend-сервисы, REST API и модернизация legacy для
+            корпоративных продуктов.
+          </span>
+        </p>
+        <div class="case-meta">
+          <div class="meta-item">
+            <div class="label"><span class="i18n-en">Role</span><span class="i18n-ru">Роль</span></div>
+            <div class="value"><span class="i18n-en">Senior Software Engineer</span><span class="i18n-ru">Senior Software Engineer</span></div>
+          </div>
+          <div class="meta-item">
+            <div class="label"><span class="i18n-en">Period</span><span class="i18n-ru">Период</span></div>
+            <div class="value">Aug 2021 — Sep 2026</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Stack</div>
+            <div class="value">.NET 8/10 · ASP.NET Core · GCP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container case-body">
+      <h2><span class="i18n-en">Overview</span><span class="i18n-ru">Обзор</span></h2>
+      <p class="i18n-en">
+        At Elinext I work as a Senior Software Engineer on enterprise
+        applications with real users and business-critical workflows. I design
+        and deliver scalable backend services, own features from design to
+        production, and modernize legacy systems. Details are anonymized under
+        NDA.
+      </p>
+      <p class="i18n-ru">
+        В Elinext работаю Senior Software Engineer над корпоративными
+        приложениями с реальными пользователями и бизнес-критичными
+        процессами. Проектирую и внедряю масштабируемые backend-сервисы,
+        веду фичи от проектирования до продакшена и модернизирую legacy.
+        Детали анонимизированы по NDA.
+      </p>
+
+      <h2><span class="i18n-en">What I delivered</span><span class="i18n-ru">Что я делал</span></h2>
+      <ul>
+        <li class="i18n-en"><strong>Scalable backend services</strong> on ASP.NET Core for enterprise applications.</li>
+        <li class="i18n-ru"><strong>Масштабируемые backend-сервисы</strong> на ASP.NET Core для корпоративных приложений.</li>
+        <li class="i18n-en"><strong>RESTful APIs</strong> for internal and customer-facing systems.</li>
+        <li class="i18n-ru"><strong>RESTful API</strong> для внутренних и клиентских систем.</li>
+        <li class="i18n-en"><strong>Architecture design</strong> and technical decisions for new system components.</li>
+        <li class="i18n-ru"><strong>Проектирование архитектуры</strong> и технические решения по новым компонентам.</li>
+        <li class="i18n-en"><strong>End-to-end ownership</strong> of backend features — from design to production release.</li>
+        <li class="i18n-ru"><strong>Ownership backend-фич</strong> end-to-end — от проектирования до релиза в production.</li>
+        <li class="i18n-en"><strong>Legacy modernization</strong> — .NET Framework → .NET Core / .NET 8+.</li>
+        <li class="i18n-ru"><strong>Модернизация legacy</strong> — .NET Framework → .NET Core / .NET 8+.</li>
+        <li class="i18n-en"><strong>SSO authentication</strong> and secure access scenarios (OAuth2 / OpenID Connect).</li>
+        <li class="i18n-ru"><strong>SSO-аутентификация</strong> и безопасные сценарии доступа (OAuth2 / OpenID Connect).</li>
+        <li class="i18n-en"><strong>Internal automation tools</strong> for monitoring and operational workflows.</li>
+        <li class="i18n-ru"><strong>Внутренние инструменты автоматизации</strong> для мониторинга и операционных процессов.</li>
+        <li class="i18n-en"><strong>Performance work</strong> — Redis caching and database query optimization.</li>
+        <li class="i18n-ru"><strong>Оптимизация производительности</strong> — Redis caching и оптимизация запросов к БД.</li>
+        <li class="i18n-en">Production <strong>reliability</strong> for systems with real users and business-critical workflows.</li>
+        <li class="i18n-ru">Надёжность <strong>production-систем</strong> с реальными пользователями и критичными процессами.</li>
+        <li class="i18n-en"><strong>Code reviews</strong>, knowledge sharing, and <strong>mentoring</strong> junior developers.</li>
+        <li class="i18n-ru"><strong>Code reviews</strong>, обмен знаниями и <strong>менторинг</strong> junior-разработчиков.</li>
+      </ul>
+
+      <h2><span class="i18n-en">AI workflow</span><span class="i18n-ru">AI workflow</span></h2>
+      <ul>
+        <li class="i18n-en">Model routing through OpenRouter with structured JSON outputs.</li>
+        <li class="i18n-ru">Маршрутизация моделей через OpenRouter со structured JSON.</li>
+        <li class="i18n-en">Schema validation, retries and fallbacks before anything reaches the database.</li>
+        <li class="i18n-ru">Валидация схемы, retries и fallbacks до записи в базу.</li>
+        <li class="i18n-en">Prompt and response logging, cost and latency guardrails.</li>
+        <li class="i18n-ru">Логирование промптов и ответов, guardrails по стоимости и задержке.</li>
+      </ul>
+
+      <h2><span class="i18n-en">Results &amp; Impact</span><span class="i18n-ru">Результаты и влияние</span></h2>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-num">5+</div>
+          <div class="metric-lbl"><span class="i18n-en">years at Elinext</span><span class="i18n-ru">лет в Elinext</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">10+</div>
+          <div class="metric-lbl"><span class="i18n-en">features end-to-end</span><span class="i18n-ru">фич от начала до конца</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">8 → 5 h</div>
+          <div class="metric-lbl"><span class="i18n-en">manual work per week (↓35%)</span><span class="i18n-ru">ручной работы в неделю (↓35%)</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">160 → 96 ms</div>
+          <div class="metric-lbl"><span class="i18n-en">API response time (↓40%)</span><span class="i18n-ru">время ответа API (↓40%)</span></div>
+        </div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 760 250" role="img" aria-label="Optimization results chart">
+          <defs>
+            <linearGradient id="opt1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#6366f1" />
+              <stop offset="1" stop-color="#8b5cf6" />
+            </linearGradient>
+            <linearGradient id="opt2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#06b6d4" />
+              <stop offset="1" stop-color="#3b82f6" />
+            </linearGradient>
+            <linearGradient id="opt3" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ec4899" />
+              <stop offset="1" stop-color="#f43f5e" />
+            </linearGradient>
+          </defs>
+          <g font-family="Segoe UI, Arial, sans-serif">
+            <text x="24" y="36" font-size="14" fill="#475569" font-weight="600">API response time</text>
+            <text x="24" y="54" font-size="11" fill="#94a3b8">160ms → 96ms</text>
+            <rect x="280" y="28" width="160" height="26" rx="9" fill="url(#opt1)" />
+            <text x="452" y="47" font-size="15" font-weight="800" fill="#4338ca">↓40%</text>
+
+            <text x="24" y="122" font-size="14" fill="#475569" font-weight="600">DB query time</text>
+            <text x="24" y="140" font-size="11" fill="#94a3b8">110ms → 50ms</text>
+            <rect x="280" y="114" width="220" height="26" rx="9" fill="url(#opt2)" />
+            <text x="512" y="133" font-size="15" font-weight="800" fill="#0e7490">↓55%</text>
+
+            <text x="24" y="208" font-size="14" fill="#475569" font-weight="600">Manual operations</text>
+            <text x="24" y="226" font-size="11" fill="#94a3b8">8h → 5h weekly</text>
+            <rect x="280" y="200" width="140" height="26" rx="9" fill="url(#opt3)" />
+            <text x="432" y="219" font-size="15" font-weight="800" fill="#be185d">↓35%</text>
+          </g>
+        </svg>
+        <figcaption class="diagram-fig">
+          <span class="i18n-en">Optimization results — Redis caching, query tuning, and automation.</span>
+          <span class="i18n-ru">Результаты оптимизации — Redis caching, тюнинг запросов и автоматизация.</span>
+        </figcaption>
+      </figure>
+
+      <h2><span class="i18n-en">Achievements</span><span class="i18n-ru">Ачивки</span></h2>
+      <ul class="achievements">
+        <li class="i18n-en">API response time reduced from 160 to 96 ms; database queries from 110 to 50 ms.</li>
+        <li class="i18n-ru">Время ответа API снижено с 160 до 96 мс; запросы к БД — с 110 до 50 мс.</li>
+        <li class="i18n-en">Manual operations cut from 8 to 5 hours per week (−35%).</li>
+        <li class="i18n-ru">Ручные операции сокращены с 8 до 5 часов в неделю (−35%).</li>
+        <li class="i18n-en">SSO (OAuth2 / OpenID Connect) delivered across several client products.</li>
+        <li class="i18n-ru">SSO (OAuth2 / OpenID Connect) внедрён в нескольких клиентских продуктах.</li>
+        <li class="i18n-en">Legacy .NET Framework modules modernized to .NET 8+ without stopping releases.</li>
+        <li class="i18n-ru">Legacy-модули .NET Framework переведены на .NET 8+ без остановки релизов.</li>
+      </ul>
+
+      <p class="note" style="margin-top: 24px">
+        <span class="i18n-en">
+          Details are anonymized under NDA. I'm happy to elaborate on specifics
+          (client sector, scale, stack) during an interview.
+        </span>
+        <span class="i18n-ru">
+          Детали анонимизированы по NDA. Готов раскрыть конкретику (сфера
+          клиента, масштаб, стек) на собеседовании.
+        </span>
+      </p>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© <span id="year"></span> Ilya Panko</span>
+        <a href="../index.html">
+          <span class="i18n-en">Back to main</span>
+          <span class="i18n-ru">На главную</span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

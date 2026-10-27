@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSD — Ilya Panko Portfolio</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var theme = null;
+        var lang = null;
+        try {
+          theme = localStorage.getItem("theme");
+          lang = localStorage.getItem("lang");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        root.dataset.theme = theme;
+        if (lang === "ru" || lang === "en") root.dataset.lang = lang;
+      })();
+    </script>
+    <meta name="description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta name="author" content="Ilya Panko" />
+    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://kotkenny.vercel.app/cases/ksd.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ilya Panko" />
+    <meta property="og:title" content="KSD — Ilya Panko Portfolio" />
+    <meta property="og:description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta property="og:url" content="https://kotkenny.vercel.app/cases/ksd.html" />
+    <meta property="og:image" content="https://kotkenny.vercel.app/assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ilya Panko — Senior Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KSD — Ilya Panko Portfolio" />
+    <meta name="twitter:description" content="Case study from Ilya Panko's portfolio: .NET, React Native and AI workflow." />
+    <meta name="twitter:image" content="https://kotkenny.vercel.app/assets/og.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../index.html">Ilya Panko</a>
+        <nav class="nav">
+          <button class="lang-toggle" data-lang-toggle type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <span data-lang-label>RU</span>
+          </button>
+          <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch color theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="case-header">
+      <div class="container">
+        <a class="back" href="../index.html#projects"><svg class="back-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5" /><path d="m12 19-7-7 7-7" /></svg> <span class="i18n-en">Back to projects</span><span class="i18n-ru">Назад к проектам</span></a>
+        <h1>KSD</h1>
+        <p class="sub">
+          <span class="i18n-en">
+            Performance and stability of a business web platform — integrating
+            ASP.NET Core into a legacy system.
+          </span>
+          <span class="i18n-ru">
+            Производительность и стабильность бизнес web-платформы —
+            интеграция ASP.NET Core в legacy-систему.
+          </span>
+        </p>
+        <div class="case-meta">
+          <div class="meta-item">
+            <div class="label"><span class="i18n-en">Role</span><span class="i18n-ru">Роль</span></div>
+            <div class="value">.NET Developer</div>
+          </div>
+          <div class="meta-item">
+            <div class="label"><span class="i18n-en">Period</span><span class="i18n-ru">Период</span></div>
+            <div class="value">Nov 2019 — Jan 2021</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Stack</div>
+            <div class="value">ASP.NET Core · WebForms · MySQL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container case-body">
+      <h2><span class="i18n-en">Overview</span><span class="i18n-ru">Обзор</span></h2>
+      <p class="i18n-en">
+        At KSD (Delivery, Minsk) I worked on an existing business web platform
+        with a legacy codebase. My focus was improving its performance and
+        stability while gradually bringing modern ASP.NET Core services into
+        the existing architecture. Details are anonymized under NDA.
+      </p>
+      <p class="i18n-ru">
+        В KSD (Delivery, Минск) я работал над существующей бизнес
+        web-платформой с legacy-кодом. Мой фокус — улучшение
+        производительности и стабильности при постепенном внедрении
+        современных ASP.NET Core сервисов в существующую архитектуру. Детали
+        анонимизированы по NDA.
+      </p>
+
+      <h2><span class="i18n-en">What I delivered</span><span class="i18n-ru">Что я делал</span></h2>
+      <ul>
+        <li class="i18n-en">Improved <strong>performance and stability</strong> of the business web platform.</li>
+        <li class="i18n-ru">Улучшал <strong>производительность и стабильность</strong> бизнес web-платформы.</li>
+        <li class="i18n-en">Integrated <strong>ASP.NET Core services</strong> into the legacy system architecture.</li>
+        <li class="i18n-ru">Интегрировал <strong>ASP.NET Core сервисы</strong> в архитектуру legacy-системы.</li>
+        <li class="i18n-en">Enhanced UI behavior with <strong>AJAX</strong> and frontend scripting.</li>
+        <li class="i18n-ru">Улучшал поведение UI с помощью <strong>AJAX</strong> и frontend-скриптов.</li>
+        <li class="i18n-en">Worked with <strong>Entity Framework and MySQL</strong> for data access and optimization.</li>
+        <li class="i18n-ru">Работал с <strong>Entity Framework и MySQL</strong> для доступа к данным и оптимизации.</li>
+        <li class="i18n-en">Supported a gradual transition from <strong>monolithic legacy components</strong>.</li>
+        <li class="i18n-ru">Поддерживал постепенный переход от <strong>монолитных legacy-компонентов</strong>.</li>
+      </ul>
+
+      <h2><span class="i18n-en">Results &amp; Impact</span><span class="i18n-ru">Результаты и влияние</span></h2>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-num">1.5+</div>
+          <div class="metric-lbl"><span class="i18n-en">years in delivery</span><span class="i18n-ru">лет в delivery</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">10+</div>
+          <div class="metric-lbl"><span class="i18n-en">improvements &amp; fixes</span><span class="i18n-ru">улучшений и исправлений</span></div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">3+</div>
+          <div class="metric-lbl"><span class="i18n-en">legacy modules integrated</span><span class="i18n-ru">legacy-модулей интегрировано</span></div>
+        </div>
+      </div>
+      <ul>
+        <li class="i18n-en">More responsive and stable platform for end users.</li>
+        <li class="i18n-ru">Более отзывчивая и стабильная платформа для пользователей.</li>
+        <li class="i18n-en">Reduced risk of a full rewrite by migrating incrementally.</li>
+        <li class="i18n-ru">Снижен риск полного переписывания за счёт инкрементальной миграции.</li>
+      </ul>
+
+      <p class="note" style="margin-top: 24px">
+        <span class="i18n-en">
+          Details are anonymized under NDA. I'm happy to elaborate on specifics
+          during an interview.
+        </span>
+        <span class="i18n-ru">
+          Детали анонимизированы по NDA. Готов раскрыть конкретику на
+          собеседовании.
+        </span>
+      </p>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© <span id="year"></span> Ilya Panko</span>
+        <a href="../index.html">
+          <span class="i18n-en">Back to main</span>
+          <span class="i18n-ru">На главную</span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

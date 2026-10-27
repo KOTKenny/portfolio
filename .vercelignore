@@ -1,0 +1,6 @@
+README.md
+TODO.md
+DEPLOY.md
+_og/
+node_modules/
+.vercel/
