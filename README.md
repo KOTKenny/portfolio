@@ -119,7 +119,7 @@ Vercel, проект `vort-studio/kotkenny`, репозиторий
 ## Нюансы
 
 - EN-резюме (`cv-dotnet-ai.pdf`, `cv-react-native.pdf`) пересобраны из MAIN 27.10.2026
-  скриптом `../_internal/build-cv.ps1`; RU-версии — старые экспорты и ждут RU-MAIN.
+  локальным скриптом `_internal/build-cv.ps1` (вне репозитория); RU-версии — старые экспорты и ждут RU-MAIN.
 - Отложенные задачи и следующие шаги — в [`TODO.md`](./TODO.md), деплой — в [`DEPLOY.md`](./DEPLOY.md).
 - Kyde: ссылка ведёт на приложение с bundle id `ai.joincadence.app` — подтверждено, что это
   переименованный Cadence.

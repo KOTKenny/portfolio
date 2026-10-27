@@ -18,7 +18,7 @@
 - [ ] **RU-версии MAIN отсутствуют**: `cv-dotnet-ai-ru.pdf` и `cv-react-native-ru.pdf`
       собраны из старых RU-экспортов (сентябрь 2026). Нужен RU-MAIN → пересборка.
 - [x] EN-резюме пересобраны из MAIN 27.10.2026 (`_internal/build-cv.ps1`).
-- [ ] После правок MAIN пересобрать: `powershell -ExecutionPolicy Bypass -File _internal\build-cv.ps1`.
+- [ ] После правок MAIN пересобрать локальным `_internal/build-cv.ps1` (вне репозитория).
 - [ ] Проверить, что версии `cv .NET + AI` и `cv Senior Frontend` не разошлись по датам.
 
 ## Контент
