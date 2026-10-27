@@ -31,22 +31,26 @@
 
 ## Инженерия
 
-- [ ] `project.html`: состояние 404 для неизвестного `?p` (сейчас fallback на KnowYourPartner).
+- [x] `project.html`: неизвестный `?p` редиректит на `/404.html`.
 - [ ] Синхронизировать `lang` у `<html>` с `data-lang` (сейчас статически `en`).
 - [ ] Заменить legacy SVG в статических кейсах (studhub, elinext) на компоненты графиков.
-- [ ] Добавить favicon и `theme-color`.
-- [ ] OG/Twitter meta и картинка 1200×630 для шаринга.
+- [x] favicon (`favicon.svg`, `favicon.ico`) и `theme-color`.
+- [x] OG/Twitter meta и картинка 1200×630 (`assets/og.png`).
+- [x] Self-hosted Inter + JetBrains Mono (latin + cyrillic).
 - [ ] Lighthouse: accessibility, performance, SEO.
 - [ ] Проверить печатную версию страниц и PDF-кейсов.
-- [ ] Прогнать все внешние ссылки перед деплоем (App Store, Play, Vercel, GitLab).
+- [x] Все внешние ссылки проверены перед деплоем (App Store, Play, Vercel, GitLab).
 
 ## Деплой
 
-- [ ] Выбрать хостинг и URL — план в [`DEPLOY.md`](./DEPLOY.md).
-- [ ] Решить: заменить корневой сайт или деплоить `/portfolioV2` как отдельную папку.
-- [ ] Проверить относительные пути при деплое в подпапку GitHub Pages.
-- [ ] `404.html`, `robots.txt`, `sitemap.xml`.
-- [ ] Проверить, что PDF и `assets/` попадают в артефакт деплоя.
+- [x] Vercel + CLI: проект `vort-studio/kotkenny`, production **https://kotkenny.vercel.app**.
+- [x] Репозиторий `KOTKenny/portfolio` (корень = V2), push в `main` → production.
+- [x] `404.html`, `robots.txt`, `sitemap.xml`, `vercel.json`, `.vercelignore`.
+- [x] PDF, шрифты, OG и `assets/` в артефакте.
+- [x] Security headers и кеш шрифтов/PDF.
+- [ ] Свой домен (опционально); после него обновить canonical, OG, sitemap.
+- [ ] Проверить OG-превью в Telegram/LinkedIn на production.
+- [ ] Прогнать Lighthouse на production.
 
 ## Идеи на потом
 

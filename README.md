@@ -4,11 +4,13 @@
 переключатель темы и языка, все кейсы внутри. Оригинал (`/index.html`, `/styles.css`, `/cases`)
 не изменялся.
 
+**Production:** https://kotkenny.vercel.app
+
 ## Как открыть
 
 `portfolioV2/index.html` — главная. Кейсы: `portfolioV2/cases/*.html`.
-Статический сайт, сборка не нужна. Шрифты Inter / JetBrains Mono подключены с Google Fonts,
-без сети работают системные fallback-стеки.
+Статический сайт, сборка не нужна. Шрифты Inter / JetBrains Mono лежат в `assets/fonts/`
+и подключены локально — внешних зависимостей нет.
 
 ## Позиционирование
 
@@ -57,16 +59,33 @@ portfolioV2/
   index.html           главная
   styles.css           токены и компоненты
   script.js            язык, тема, подсветка раздела
+  404.html             кастомная 404
+  vercel.json          headers: security + cache
+  robots.txt
+  sitemap.xml
   cases/
     studhub.html       статические кейсы (studhub, elinext, ksd, tesib, bsatu, bseu)
     project.html       шаблон новых кейсов (?p=knowyourpartner|blizhe|kyde|medical-records)
     project-data.js    контент новых кейсов на EN/RU
     project.js         рендер кейса и переключение языка
-  assets/              портрет
+  assets/
+    ilya-panko-new.png
+    og.png             OG 1200×630
+    favicon.svg
+    fonts/             self-hosted Inter + JetBrains Mono (latin + cyrillic)
+  favicon.ico
   cv-dotnet-ai.pdf     CV .NET + AI (EN / RU)
   cv-react-native.pdf  CV React Native (EN / RU)
   README.md
+  TODO.md
+  DEPLOY.md
 ```
+
+## Деплой
+
+Vercel, проект `vort-studio/kotkenny`, репозиторий
+[KOTKenny/portfolio](https://github.com/KOTKenny/portfolio). Push в `main` деплоит автоматически.
+Подробности и откат — в [`DEPLOY.md`](./DEPLOY.md).
 
 ## Дизайн
 
@@ -91,7 +110,9 @@ portfolioV2/
 - Переключение темы и языка без перезагрузки; динамические кейсы перерисовываются на EN/RU.
 - Внешние ссылки отдают 200: studhub.by, App Store и Google Play Studhub, knowyourpartner.vercel.app,
   blizhe-virid.vercel.app, App Store Kyde, Google Play BSEU/BSATU, GitLab BSEU.
-- PDF-резюме и портрет лежат внутри V2; внешних зависимостей кроме Google Fonts нет.
+- Production `https://kotkenny.vercel.app`: главная, кейсы, PDF, OG и шрифты отдают 200;
+  неизвестный URL — кастомная 404; неизвестный `?p=` редиректит на `/404.html`.
+- PDF-резюме, портрет, OG и шрифты лежат внутри V2; внешних зависимостей нет.
 - Контраст текста и акцентов ≥ 4.5:1 в обеих темах, фокус с клавиатуры виден,
   `prefers-reduced-motion` учтён.
 
@@ -99,9 +120,11 @@ portfolioV2/
 
 - EN-резюме (`cv-dotnet-ai.pdf`, `cv-react-native.pdf`) пересобраны из MAIN 27.10.2026
   скриптом `../_internal/build-cv.ps1`; RU-версии — старые экспорты и ждут RU-MAIN.
-- Отложенные задачи и следующие шаги — в [`TODO.md`](./TODO.md).
+- Отложенные задачи и следующие шаги — в [`TODO.md`](./TODO.md), деплой — в [`DEPLOY.md`](./DEPLOY.md).
 - Kyde: ссылка ведёт на приложение с bundle id `ai.joincadence.app` — подтверждено, что это
   переименованный Cadence.
 - Medical records: NDA, без названия клиента, публичных ссылок и скриншотов.
 - Старые SVG в статических кейсах оставлены как есть (контент не переписывался), палитра
   адаптирована CSS-ом.
+- `canonical`, `og:url`, `og:image` и `sitemap.xml` содержат `https://kotkenny.vercel.app`;
+  при переименовании проекта или подключении домена их нужно обновить.

@@ -4,3 +4,4 @@ DEPLOY.md
 _og/
 node_modules/
 .vercel/
+.env*
